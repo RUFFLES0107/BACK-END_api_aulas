@@ -12,24 +12,29 @@ const port = 3000
 app.use(express.json()) // configura API para usar JSON.
 const fs = require('fs') // importa leitura e escrita de arquivos.
 
-// Cadastrar aula (ID automático usando id.json)
+const arquivoID = JSON.parse(fs.readFileSync("id.json", "utf8"))
+let id = arquivoID.id
+
+function atualizarID() {
+    id = id + 1
+    fs.writeFileSync("id.json", JSON.stringify({id: id}), "utf8")
+}
+
+// CADASTRO
 app.post("/aulas", (req, res) => {
+    const produto = req.body
     try {
-        // Lê o último ID
-        const idData = JSON.parse(fs.readFileSync("id.json", "utf8"))
-        const novoId = idData.ultimoId + 1
+        const aulas = JSON.parse(fs.readFileSync("aulas.json", "utf8"))
+        atualizarID()
+        produto.id = id
+        aulas.push(produto)
+        fs.writeFileSync("aulas.json", JSON.stringify(aulas), "utf8")
+        res.status(201).json({mensagem: "aula cadastrada!"})
+    } catch (error) {
+        res.status(500).json({erro: error.message})
+    }
+})
 
-        // Atualiza o contador de ID
-        idData.ultimoId = novoId
-        fs.writeFileSync("id.json", JSON.stringify(idData, null, 2), "utf8")
-
-        // Lê as aulas
-        const bd = JSON.parse(fs.readFileSync("aulas.json", "utf8"))
-
-        const aula = {
-            id: novoId,
-            ...req.body
-        }
 
 app.get("/aulas", (req, res) => {
     try{
