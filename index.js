@@ -15,19 +15,19 @@ const fs = require('fs') // importa leitura e escrita de arquivos.
 const arquivoID = JSON.parse(fs.readFileSync("id.json", "utf8"))
 let id = arquivoID.id
 
-function atualizarID() {
+function atualizarID() { 
     id = id + 1
     fs.writeFileSync("id.json", JSON.stringify({id: id}), "utf8")
 }
 
 // CADASTRO
 app.post("/aulas", (req, res) => {
-    const produto = req.body
+    const aula = req.body
     try {
         const aulas = JSON.parse(fs.readFileSync("aulas.json", "utf8"))
         atualizarID()
-        produto.id = id
-        aulas.push(produto)
+        aulas.id = id
+        aulas.push(aula)
         fs.writeFileSync("aulas.json", JSON.stringify(aulas), "utf8")
         res.status(201).json({mensagem: "aula cadastrada!"})
     } catch (error) {
