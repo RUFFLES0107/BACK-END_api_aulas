@@ -35,7 +35,6 @@ app.post("/aulas", (req, res) => {
     }
 })
 
-
 app.get("/aulas", (req, res) => {
     try{
     // abrir arquivo 
@@ -68,7 +67,22 @@ app.delete("/aulas/:id", (req, res) => {
     }
 })
 
+app.get("/aulas/:Dia",(req,res)=>{
+    const Dia=req.params.Dia
 
+    try{
+        const aula = JSON.parse(fs.readFileSync("aulas.json","utf8"))
+        const aula_dia = aula.filter((aula)=> aula.Dia.toLowerCase()===Dia.toLocaleUpperCase())
+        if(aula_dia.length===0){
+            res.status(400).json({resposta: aula_dia})
+        }
+    
+        res.status(200).json({resposta:aula_dia})
+
+    }catch(erro){
+            res.status(500).json({erro:"Erro interno do servidor"})
+        }
+    })
 
 
 
