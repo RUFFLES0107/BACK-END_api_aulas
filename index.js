@@ -72,9 +72,10 @@ app.get("/aulas/:Dia",(req,res)=>{
 
     try{
         const aula = JSON.parse(fs.readFileSync("aulas.json","utf8"))
-        const aula_dia = aula.filter((aula)=> aula.Dia.toLowerCase()===Dia.toLocaleUpperCase())
+        const aula_dia = aula.filter((aula)=> aula.Dia.toLowerCase()===Dia.toLowerCase())
+        const ordem = aula_dia.sort((a, b) => a.ordem - b.ordem)
         if(aula_dia.length===0){
-            res.status(400).json({resposta: aula_dia})
+            return res.status(400).json({resposta: aula_dia})
         }
     
         res.status(200).json({resposta:aula_dia})
