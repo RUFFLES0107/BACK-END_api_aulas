@@ -22,17 +22,20 @@ function atualizarID() {
 
 // CADASTRO
 app.post("/aulas", (req, res) => {
+  try {
     const aula = req.body
-    try {
-        const aulas = JSON.parse(fs.readFileSync("aulas.json", "utf8"))
-        atualizarID()
-        aulas.id = id
-        aulas.push(aula)
-        fs.writeFileSync("aulas.json", JSON.stringify(aulas), "utf8")
-        res.status(201).json({mensagem: "aula cadastrada!"})
-    } catch (error) {
-        res.status(500).json({erro: error.message})
-    }
+    const aulas = JSON.parse(fs.readFileSync("aulas.json", "utf8"))
+
+    atualizarID()
+    aula.Id = id   
+
+    aulas.push(aula)
+    fs.writeFileSync("aulas.json", JSON.stringify(aulas, null, 2), "utf8")
+    
+    res.status(201).json({ mensagem: "aula cadastrada!", id: id })
+  } catch (error) {
+    res.status(500).json({ erro: error.message })
+  }
 })
 
 app.get("/aulas", (req, res) => {
@@ -46,25 +49,23 @@ app.get("/aulas", (req, res) => {
 })
 
 app.delete("/aulas/:id", (req, res) => {
-    // pegar o id da rota
-    const id = req.params.id
-    try {
-        // abrir o banco de dados
-        const bd = JSON.parse(fs.readFileSync("aulas.json", "utf8"))
-        // encontrar o índice do cliente a ser excluido
-        const indiceID = bd.findIndex((aula) => aula.id == id)
-        // remover o indice da lista
-        if (indiceID == -1) {
-            return res.status(404).json({erro: "A aula não existe"})
-        }
-        bd.splice(indiceID, 1)
-        // atualizar o arquivo
-        fs.writeFileSync("aulas.json", JSON.stringify(bd), "utf8")
-        // dar uma resposta para o cliente
-        res.status(200).json({resposta: "Aula removida com sucesso!"})
-    } catch (error){
-        res.status(500).json({erro: erro.message})
+  const id = req.params.id
+  try {
+    const bd = JSON.parse(fs.readFileSync("aulas.json", "utf8"))
+    
+    const indiceID = bd.findIndex((aula) => aula.Id == id)  
+    
+    if (indiceID === -1) {
+      return res.status(404).json({ erro: "A aula não existe" })
     }
+    
+    bd.splice(indiceID, 1)
+    fs.writeFileSync("aulas.json", JSON.stringify(bd, null, 2), "utf8")
+    
+    res.status(200).json({ resposta: "Aula removida com sucesso!" })
+  } catch (error) {
+    res.status(500).json({ erro: error.message })
+  }
 })
 
 app.get("/aulas/:Dia",(req,res)=>{
