@@ -50,20 +50,20 @@
 
     <script>
 
-        async function carregar_horario(dia){
-            const coluna_dia = document.getElementById(dia)
+        async function carregar_horario(Dia){
+            const coluna_dia = document.getElementById(Dia)
             try {
-                const link = "http://localhost:3000/horario/" + dia
+                const link = "http://localhost:3000/aulas/" + Dia
                 const consulta_api = await fetch(link)
                 if(consulta_api.ok) {
                     const aulas_dia = await consulta_api.json()
-                    if (aulas_dia.length == 0){
+                    if (aulas_dia.resposta.length == 0){
                         coluna_dia.innerHTML = "Nenhuma aula cadastrada!"
                     } else {
                         console.log(aulas_dia)
                         coluna_dia.innerHTML = "<ul>"
-                        aulas_dia.forEach((aula) => {
-                            coluna_dia.innerHTML += "<li>" + aula.componente + "</li>"
+                        aulas_dia.resposta.forEach((aula) => {
+                            coluna_dia.innerHTML += "<li>" + aula.materia + "</li>"
                         })
                         coluna_dia.innerHTML += "</ul>"
                     }

@@ -3,210 +3,210 @@
     "Dia": "Segunda",
     "Ordem": "1° Aula",
     "Professor": "Carolina",
-    "Matéria": "Português",
+    "materia": "Português",
     "id": 1
   },
   {
     "Dia": "Segunda",
     "Ordem": "2° Aula",
     "Professor": "Patrick",
-    "Matéria": "Back End",
+    "materia": "Back End",
     "id": 2
   },
   {
     "Dia": "Segunda",
     "Ordem": "3° Aula",
     "Professor": "Carolina",
-    "Matéria": "Português",
+    "materia": "Português",
     "id": 3
   },
   {
     "Dia": "Segunda",
     "Ordem": "4° Aula",
     "Professor": "Patrick",
-    "Matéria": "Banco de Dados",
+    "materia": "Banco de Dados",
     "id": 4
   },
   {
     "Dia": "Segunda",
     "Ordem": "5° Aula",
     "Professor": "Patrick",
-    "Matéria": "Banco de Dados",
+    "materia": "Banco de Dados",
     "id": 5
   },
   {
     "Dia": "Segunda",
     "Ordem": "6° Aula",
     "Professor": "Fabieli",
-    "Matéria": "ED.Financeira",
+    "materia": "ED.Financeira",
     "id": 6
   },
   {
     "Dia": "Terça",
     "Ordem": "1° Aula",
     "Professor": "Eleandro",
-    "Matéria": "Física",
+    "materia": "Física",
     "id": 7
   },
   {
     "Dia": "Terça",
     "Ordem": "2° Aula",
     "Professor": "Eleandro",
-    "Matéria": "Física",
+    "materia": "Física",
     "id": 8
   },
   {
     "Dia": "Terça",
     "Ordem": "3° Aula",
     "Professor": "Priscila",
-    "Matéria": "Sociologia",
+    "materia": "Sociologia",
     "id": 9
   },
   {
     "Dia": "Terça",
     "Ordem": "4° Aula",
     "Professor": "Patrick",
-    "Matéria": "Banco de Dados",
+    "materia": "Banco de Dados",
     "id": 10
   },
   {
     "Dia": "Terça",
     "Ordem": "5° Aula",
     "Professor": "Ronaldo",
-    "Matéria": "Filosofia",
+    "materia": "Filosofia",
     "id": 11
   },
   {
     "Dia": "Terça",
     "Ordem": "6° Aula",
     "Professor": "Patrick",
-    "Matéria": "Back End",
+    "materia": "Back End",
     "id": 12
   },
   {
     "Dia": "Quarta",
     "Ordem": "1° Aula",
     "Professor": "Adriele",
-    "Matéria": "Inglês",
+    "materia": "Inglês",
     "id": 13
   },
   {
     "Dia": "Quarta",
     "Ordem": "2° Aula",
     "Professor": "Ines",
-    "Matéria": "Matemática",
+    "materia": "Matemática",
     "id": 14
   },
   {
     "Dia": "Quarta",
     "Ordem": "3° Aula",
     "Professor": "Samuel",
-    "Matéria": "Educação Física",
+    "materia": "Educação Física",
     "id": 15
   },
   {
     "Dia": "Quarta",
     "Ordem": "4° Aula",
     "Professor": "Samuel",
-    "Matéria": "Educação Física",
+    "materia": "Educação Física",
     "id": 16
   },
   {
     "Dia": "Quarta",
     "Ordem": "5° Aula",
     "Professor": "Ines",
-    "Matéria": "Matemática",
+    "materia": "Matemática",
     "id": 17
   },
   {
     "Dia": "Quarta",
     "Ordem": "6° Aula",
     "Professor": "Carolina",
-    "Matéria": "Português",
+    "materia": "Português",
     "id": 18
   },
   {
     "Dia": "Quinta",
     "Ordem": "1° Aula",
     "Professor": "Rosa",
-    "Matéria": "Inovação Tecnológica e Empreendedorismo",
+    "materia": "Inovação Tecnológica e Empreendedorismo",
     "id": 19
   },
   {
     "Dia": "Quinta",
     "Ordem": "2° Aula",
     "Professor": "Ronaldo",
-    "Matéria": "Filosofia",
+    "materia": "Filosofia",
     "id": 20
   },
   {
     "Dia": "Quinta",
     "Ordem": "3° Aula",
     "Professor": "Josiane",
-    "Matéria": "Front End",
+    "materia": "Front End",
     "id": 21
   },
   {
     "Dia": "Quinta",
     "Ordem": "4° Aula",
     "Professor": "Adriele",
-    "Matéria": "Inglês",
+    "materia": "Inglês",
     "id": 22
   },
   {
     "Dia": "Quinta",
     "Ordem": "5° Aula",
     "Professor": "Patrick",
-    "Matéria": "Back End",
+    "materia": "Back End",
     "id": 23
   },
   {
     "Dia": "Quinta",
     "Ordem": "6° Aula",
     "Professor": "Priscila",
-    "Matéria": "Sociologia",
+    "materia": "Sociologia",
     "id": 24
   },
   {
     "Dia": "Sexta",
     "Ordem": "1° Aula",
     "Professor": "Rosa",
-    "Matéria": "Inovação Tecnológica e Empreendedorismo",
+    "materia": "Inovação Tecnológica e Empreendedorismo",
     "id": 25
   },
   {
     "Dia": "Sexta",
     "Ordem": "2° Aula",
     "Professor": "Rosa",
-    "Matéria": "Inovação Tecnológica e Empreendedorismo",
+    "materia": "Inovação Tecnológica e Empreendedorismo",
     "id": 26
   },
   {
     "Dia": "Sexta",
     "Ordem": "3° Aula",
     "Professor": "Helcio",
-    "Matéria": "História",
+    "materia": "História",
     "id": 27
   },
   {
     "Dia": "Sexta",
     "Ordem": "4° Aula",
     "Professor": "Josiane",
-    "Matéria": "Front End",
+    "materia": "Front End",
     "id": 28
   },
   {
     "Dia": "Sexta",
     "Ordem": "5° Aula",
     "Professor": "Helcio",
-    "Matéria": "História",
+    "materia": "História",
     "id": 29
   },
   {
     "Dia": "Sexta",
     "Ordem": "6° Aula",
     "Professor": "Josiane",
-    "Matéria": "Front End",
+    "materia": "Front End",
     "id": 30
   }
 ]

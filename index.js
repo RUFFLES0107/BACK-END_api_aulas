@@ -12,6 +12,10 @@ const port = 3000
 app.use(express.json()) // configura API para usar JSON.
 const fs = require('fs') // importa leitura e escrita de arquivos.
 
+
+const cors=require("cors")
+app.use(cors())
+
 const arquivoID = JSON.parse(fs.readFileSync("id.json", "utf8"))
 let id = arquivoID.id
 
