@@ -1,0 +1,140 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E RESET
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    overflow-x: auto; /* Garante rolagem em telas pequenas */
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA TABELA
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #fff;
+}
+
+th {
+    background-color: #ff0000;
+    color: #000000;
+    font-weight: 600;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #ff0000;
+}
+
+th:first-child {
+    border-top-left-radius: 8px;
+}
+
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+td {
+    padding: 12px 8px;
+    border: 1px solid #e2e8f0;
+    vertical-align: top; /* Alinha o conteúdo no topo para manter simetria */
+}
+
+/* Zebra striping suave nas colunas (opcional, melhora a leitura) */
+td:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* ==========================================================================
+   ALINHAMENTO DAS LISTAS (Horários e Matérias)
+   ========================================================================== */
+ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Remove espaçamentos extras */
+}
+
+li {
+    height: 45px; /* Altura fixa idêntica para horários e matérias se alinharem perfeitamente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    border-bottom: 1px dashed #ff0000; /* Divisória sutil entre as linhas de aula */
+}
+
+li:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+/* Estilo específico para a coluna de horários */
+td:first-child li {
+    font-weight: bold;
+    color: #fb0e0e;
+    background-color: #000000;
+    border-radius: 4px;
+    margin: 2px 0;
+}
+
+/* ==========================================================================
+   BOTÕES DE CARREGAR
+   ========================================================================== */
+button {
+    background-color: #fa0000;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
+button:hover {
+    background-color: #ff0000;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================================
+   MENSAGENS DE STATUS (Vazio ou Erro)
+   ========================================================================== */
+td[id] {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* Caso queira estilizar avisos específicos via JS text */
+.error-msg {
+    color: #e74c3c;
+    font-weight: 500;
+}
